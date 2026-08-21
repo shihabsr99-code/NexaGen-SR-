@@ -5,7 +5,7 @@ from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 # Telegram Bot Token
 TOKEN = '8907396342:AAEYMg4UxUeMAigZ8NPMDQSUShBdwLuyHGI'
 
-# আপনার সঠিক Netlify লাইভ মিনি অ্যাপ লিংক (রুট ডিরেক্টরি নিশ্চিত করতে শেষ অব্দি '/')
+# আপনার সঠিক Netlify লাইভ মিনি অ্যাপ লিংক
 MINI_APP_URL = 'https://effortless-salamander-c36c5a.netlify.app/'
 CHANNEL_URL = 'https://t.me/NexaEarn_Channel'
 
@@ -25,7 +25,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         f"and withdraw real money right to your mobile wallet. Let's go! 🚀"
     )
 
-    # Inline Keyboards (সঠিক রুট মিনি অ্যাপ লিংক ও চ্যানেল লিংক সহ)
+    # ফিক্সড: এখানে WebAppInfo ব্যবহার করা হয়েছে, যা টেলিগ্রামের ভেতরেই মিনি অ্যাপ ওপেন করবে
     keyboard = [
         [InlineKeyboardButton("🚀 Open App", web_app=WebAppInfo(url=MINI_APP_URL))],
         [InlineKeyboardButton("📢 Join NexaEarn Channel", url=CHANNEL_URL)]
