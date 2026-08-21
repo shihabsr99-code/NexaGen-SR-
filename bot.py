@@ -6,7 +6,7 @@ from telegram.ext import ApplicationBuilder, CommandHandler, CallbackQueryHandle
 TOKEN = '8907396342:AAEYMg4UxUeMAigZ8NPMDQSUShBdwLuyHGI'
 
 # আপনার সঠিক Netlify লাইভ মিনি অ্যাপ লিংক
-MINI_APP_URL = 'https://effortless-salamander-c36c5a.netlify.app/'
+MINI_APP_URL = ''
 CHANNEL_URL = 'https://t.me/NexaEarn_Channel'
 
 # Enable logging
