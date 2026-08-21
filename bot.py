@@ -5,8 +5,8 @@ from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 # Telegram Bot Token
 TOKEN = '8907396342:AAEYMg4UxUeMAigZ8NPMDQSUShBdwLuyHGI'
 
-# আপনার সঠিক Netlify লাইভ মিনি অ্যাপ লিংক
-MINI_APP_URL = 'https://t.me/EarnCash_pro_bot/webapp'
+# আপনার সঠিক Netlify লাইভ মিনি অ্যাপ লিংক (রুট ডিরেক্টরি নিশ্চিত করতে শেষ অব্দি '/')
+MINI_APP_URL = 'https://effortless-salamander-c36c5a.netlify.app/'
 CHANNEL_URL = 'https://t.me/NexaEarn_Channel'
 
 # Enable logging
@@ -19,14 +19,13 @@ logger = logging.getLogger(__name__)
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_name = update.effective_user.first_name or "User"
     
-    # আপনার চাওয়া নতুন ফরম্যাট এবং টেক্সট
     welcome_message = (
         f"Hello *{user_name}* - The smartest & most reliable way to earn online!\n\n"
         f"💎 Start your earning journey today! Open the app, explore daily tasks, "
         f"and withdraw real money right to your mobile wallet. Let's go! 🚀"
     )
 
-    # Inline Keyboards (সঠিক মিনি অ্যাপ লিংক সহ)
+    # Inline Keyboards (সঠিক রুট মিনি অ্যাপ লিংক ও চ্যানেল লিংক সহ)
     keyboard = [
         [InlineKeyboardButton("🚀 Open App", web_app=WebAppInfo(url=MINI_APP_URL))],
         [InlineKeyboardButton("📢 Join NexaEarn Channel", url=CHANNEL_URL)]
