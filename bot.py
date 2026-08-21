@@ -5,8 +5,8 @@ from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 # Telegram Bot Token
 TOKEN = '8907396342:AAEYMg4UxUeMAigZ8NPMDQSUShBdwLuyHGI'
 
-# আপনার মিনি অ্যাপের লাইভ লিংক এখানে বসাবেন (যেমন Firebase বা Vercel লিংক)
-MINI_APP_URL = 'https://your-mini-app-url.com'
+# আপনার সঠিক Netlify লাইভ মিনি অ্যাপ লিংক
+MINI_APP_URL = 'https://effortless-salamander-c36c5a.netlify.app/'
 CHANNEL_URL = 'https://t.me/NexaEarn_Channel'
 
 # Enable logging
@@ -19,19 +19,14 @@ logger = logging.getLogger(__name__)
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_name = update.effective_user.first_name or "User"
     
+    # আপনার চাওয়া নতুন ফরম্যাট এবং টেক্সট
     welcome_message = (
-        f"🔥 Welcome to NexaEarn Official Bot 🛡️\n"
-        f"Hello *{user_name}*! The smartest & most reliable way to earn online!\n\n"
-        f"✅ Watch daily ads & earn rewards.\n"
-        f"✅ Complete verified social tasks.\n"
-        f"✅ Invite friends for huge bonuses & 30% commission.\n"
-        f"✅ Instant crypto & mobile banking withdrawals.\n\n"
-        f"🎧 24/7 Dedicated Support.\n"
-        f"🌐 Secure, automated & trusted platform.\n\n"
-        f"📲 Click 'Open App' below & start making money now! 🚀"
+        f"Hello *{user_name}* - The smartest & most reliable way to earn online!\n\n"
+        f"💎 Start your earning journey today! Open the app, explore daily tasks, "
+        f"and withdraw real money right to your mobile wallet. Let's go! 🚀"
     )
 
-    # Inline Keyboards (Open App via WebApp & Join Channel via URL)
+    # Inline Keyboards (সঠিক মিনি অ্যাপ লিংক সহ)
     keyboard = [
         [InlineKeyboardButton("🚀 Open App", web_app=WebAppInfo(url=MINI_APP_URL))],
         [InlineKeyboardButton("📢 Join NexaEarn Channel", url=CHANNEL_URL)]
