@@ -6,7 +6,7 @@ from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 TOKEN = '8907396342:AAEYMg4UxUeMAigZ8NPMDQSUShBdwLuyHGI'
 
 # আপনার সঠিক Netlify লাইভ মিনি অ্যাপ লিংক (যা BotFather-এ কাজ করছে)
-MINI_APP_URL = 'https://effortless-salamander-c36c5a.netlify.app/'
+MINI_APP_URL = 'https://srnexgen.netlify.app'
 CHANNEL_URL = 'https://t.me/NexaEarn_Channel'
 
 # Enable logging
@@ -27,7 +27,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     # ইনলাইন বাটনে সরাসরি WebAppInfo ব্যবহার করা হলো, যা নিচের মেনু বাটনের মতোই কাজ করবে
     keyboard = [
-        [InlineKeyboardButton("🚀 Open App", web_app=WebAppInfo(url=MINI_APP_URL))],
+        [InlineKeyboardButton("NexGen Platform", web_app=WebAppInfo(url=MINI_APP_URL))],
         [InlineKeyboardButton("📢 Join NexaEarn Channel", url=CHANNEL_URL)]
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
