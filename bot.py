@@ -27,7 +27,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     # "Open App" এর বদলে নতুন "NexGen Platform" মিনি অ্যাপ বাটন এবং চ্যানেল বাটন
     keyboard = [
-        [InlineKeyboardButton("🚀 NexGen Platform", web_app=WebAppInfo(url=MINI_APP_URL))],
+        [InlineKeyboardButton("🚀 Open NexGen Platform", web_app=WebAppInfo(url=MINI_APP_URL))],
         [InlineKeyboardButton("📢 Join NexaEarn Channel", url=CHANNEL_URL)]
     ]
     reply_markup = InlineKeyboardMarkup(keyboard)
