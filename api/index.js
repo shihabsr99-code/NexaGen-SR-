@@ -18,7 +18,7 @@ export default async function handler(req, res) {
 
       // যদি ইউজার /start কমান্ড দেয়
       if (text === '/start') {
-        const welcomeMessage = `Welcome to ${fullName} our bot\n\nChoose an app below to get started. You can also use the ☰ menu button next to the message box anytime.`;
+        const welcomeMessage = `<b>Welcome to ${fullName} our bot\n\nChoose an app below to get started. You can also use the ☰ menu button next to the message box anytime.</b>`;
 
         // ইনলাইন বাটনগুলোর ডিজাইন
         const replyMarkup = {
@@ -35,7 +35,7 @@ export default async function handler(req, res) {
                 url: 'https://t.me/nexaearn_support' 
               },
               { 
-                text: 'Open App 2.0', 
+                text: '✨ Open App 2.0', 
                 url: 'https://t.me/EarnCash_pro_bot/myapp' 
               }
             ]
