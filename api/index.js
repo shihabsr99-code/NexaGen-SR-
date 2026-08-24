@@ -25,7 +25,7 @@ export default async function handler(req, res) {
           inline_keyboard: [
             [
               { 
-                text: '⚡ Open NexGen Platform 2.0', 
+                text: '💫 NexGen Platform 2.0', 
                 web_app: { url: 'https://srnxgen.netlify.app' } 
               }
             ],
@@ -35,8 +35,8 @@ export default async function handler(req, res) {
                 url: 'https://t.me/nexaearn_support' 
               },
               { 
-                text: '👤 Contact', 
-                url: 'https://t.me/NexaEarn_admin' 
+                text: 'Open App 2.0', 
+                url: 'https://t.me/EarnCash_pro_bot/myapp' 
               }
             ]
           ]
@@ -60,4 +60,3 @@ export default async function handler(req, res) {
 
   return res.status(200).json({ message: 'NexGen Bot is running smoothly on Vercel!' });
 }
-
