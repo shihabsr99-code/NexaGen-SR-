@@ -18,7 +18,8 @@ export default async function handler(req, res) {
 
       // যদি ইউজার /start কমান্ড দেয়
       if (text === '/start') {
-        const welcomeMessage = `<b>Welcome to ${fullName} our bot\n\nChoose an app below to get started. You can also use the ☰ menu button next to the message box anytime.</b>`;
+        // শুধু প্রথম লাইনটি বোল্ড করার জন্য <b> ট্যাগের ভেতরে রাখা হয়েছে
+        const welcomeMessage = `<b>👋 Welcome! ${fullName} our bot</b>\n\nChoose an app below to get started. You can also use the ☰ menu button next to the message box anytime.`;
 
         // ইনলাইন বাটনগুলোর ডিজাইন
         const replyMarkup = {
@@ -49,6 +50,7 @@ export default async function handler(req, res) {
           body: JSON.stringify({
             chat_id: chatId,
             text: welcomeMessage,
+            parse_mode: 'HTML',
             reply_markup: replyMarkup
           })
         });
