@@ -19,7 +19,7 @@ export default async function handler(req, res) {
       // যদি ইউজার /start কমান্ড দেয়
       if (text === '/start') {
         // শুধু প্রথম লাইনটি বোল্ড করার জন্য <b> ট্যাগের ভেতরে রাখা হয়েছে
-        const welcomeMessage = `<b>👋 Hello (${fullName}) Welcome to our bot!</b>\n\nChoose an app below to get started. You can also use the ☰ menu button next to the message box anytime.`;
+        const welcomeMessage = `<b>👋 Hello ${fullName}, Welcome to our bot!</b>\n\nChoose an app below to get started. You can also use the ☰ menu button next to the message box anytime.`;
 
         // ইনলাইন বাটনগুলোর ডিজাইন
         const replyMarkup = {
