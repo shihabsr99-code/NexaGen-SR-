@@ -19,7 +19,8 @@ export default async function handler(req, res) {
         // স্ক্রিনশটের মতো প্রিমিয়াম স্টাইল মেসেজ
         const welcomeMessage = 
           `<blockquote>👋 <b>Hello, ${fullName}! ❞</b></blockquote>\n\n` +
-          `<blockquote>Welcome to <b>NexGen Platform Bot</b>. Choose an app below to get started or use the ☰ menu button anytime. ❞</blockquote>`;
+          `<blockquote>Welcome to <b>NexGen Platform Bot</b>.\n\n` +
+          `<Choosee an app below to get started or use the ☰ menu button anytime. ❞</blockquote>`;
 
         // ইনলাইন বাটন ডিজাইন
         const replyMarkup = {
