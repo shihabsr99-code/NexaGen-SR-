@@ -19,7 +19,7 @@ export default async function handler(req, res) {
         // ফিক্সড প্রিমিয়াম স্টাইল মেসেজ
         const welcomeMessage = 
           `<blockquote>👋 <b>Hello, ${fullName}! ❞</b></blockquote>\n\n` +
-          `<blockquote>Welcome to <b>NexGen Platform Bot</b>.\n` +
+          `<blockquote>Welcome to <b>NexaEarn (Apex)</b>.\n` +
           `Choose an app below to get started or use the ☰ menu button anytime. ❞</blockquote>`;
 
         // ইনলাইন বাটন ডিজাইন
