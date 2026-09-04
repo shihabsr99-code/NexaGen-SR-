@@ -16,11 +16,11 @@ export default async function handler(req, res) {
 
       // যদি ইউজার /start কমান্ড দেয়
       if (text === '/start') {
-        // স্ক্রিনশটের মতো প্রিমিয়াম স্টাইল মেসেজ
+        // ফিক্সড প্রিমিয়াম স্টাইল মেসেজ
         const welcomeMessage = 
           `<blockquote>👋 <b>Hello, ${fullName}! ❞</b></blockquote>\n\n` +
           `<blockquote>Welcome to <b>NexGen Platform Bot</b>.\n\n` +
-          `<Choosee an app below to get started or use the ☰ menu button anytime. ❞</blockquote>`;
+          `Choose an app below to get started or use the ☰ menu button anytime. ❞</blockquote>`;
 
         // ইনলাইন বাটন ডিজাইন
         const replyMarkup = {
@@ -46,7 +46,7 @@ export default async function handler(req, res) {
 
         // টেলিগ্রামে মেসেজ পাঠানো
         try {
-          await fetch(`${TELEGRAM_API}/sendMessage`, {
+          const response = await fetch(`${TELEGRAM_API}/sendMessage`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -56,8 +56,13 @@ export default async function handler(req, res) {
               reply_markup: replyMarkup
             })
           });
+          
+          const result = await response.json();
+          if (!result.ok) {
+            console.error("Telegram API Error:", result.description);
+          }
         } catch (error) {
-          console.error("Error sending message:", error);
+          console.error("Fetch Error:", error);
         }
       }
     }
